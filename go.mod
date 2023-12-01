@@ -4,7 +4,7 @@ go 1.21.4
 
 require (
 	github.com/alexflint/go-arg v1.4.3
-	github.com/xyproto/autoimport v1.5.0
+	github.com/xyproto/autoimport v1.5.2
 )
 
 require (
