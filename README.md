@@ -22,4 +22,4 @@ Write the propsed changes to the imports:
 
 * Author: Alexander F. Rødseth
 * License: BSD-3
-* Version: 0.0.1
+* Version: 1.0.0
