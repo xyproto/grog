@@ -2,6 +2,8 @@
 
 Clean up or re-organize Java and Kotlin imports, or expand wildcard imports.
 
+Bug reports and pull requests are welcome.
+
 ## Installation
 
     go install github.com/xyproto/grog@latest
