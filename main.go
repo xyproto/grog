@@ -10,16 +10,16 @@ import (
 
 // Args struct to hold command line arguments
 type Args struct {
-	Filename              string `arg:"positional" help:"The filename to process"`
-	Apply                 bool   `arg:"-a,--apply" help:"Write changes back to the file"`
-	Verbose               bool   `arg:"-v,--verbose" help:"Enable verbose output"`
-	RemoveExistingImports bool   `arg:"-r,--remove" help:"Remove existing imports" default:"true"`
-	DeGlob                bool   `arg:"-d,--deglob" help:"Expand wildcard imports" default:"true"`
+	Filename            string `arg:"positional" help:"The filename to process"`
+	Apply               bool   `arg:"-a,-w,--apply,--write" help:"Write changes back to the file"`
+	Verbose             bool   `arg:"-v,--verbose" help:"Enable verbose output"`
+	KeepExistingImports bool   `arg:"-k,--keep" help:"Remove existing imports" default:"true"`
+	DeGlob              bool   `arg:"-d,--deglob" help:"Expand wildcard imports" default:"true"`
 }
 
 // Version returns the current program name and version
 func (Args) Version() string {
-	return "Grog 1.0.0"
+	return "Grog 1.0.1"
 }
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	data, err := autoimport.Fix(args.Filename, args.RemoveExistingImports, args.DeGlob, args.Verbose)
+	data, err := autoimport.Fix(args.Filename, !args.KeepExistingImports, args.DeGlob, args.Verbose)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Could not re-organize imports in %s: %s\n", args.Filename, err)
 		os.Exit(1)
