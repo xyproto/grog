@@ -1,0 +1,12 @@
+# github.com/alexflint/go-arg v1.4.3
+## explicit; go 1.13
+github.com/alexflint/go-arg
+# github.com/alexflint/go-scalar v1.2.0
+## explicit; go 1.15
+github.com/alexflint/go-scalar
+# github.com/xyproto/autoimport v1.5.0
+## explicit; go 1.19
+github.com/xyproto/autoimport
+# github.com/xyproto/env/v2 v2.2.4
+## explicit; go 1.19
+github.com/xyproto/env/v2
